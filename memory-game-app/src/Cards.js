@@ -19,8 +19,9 @@ const [items, setItems] = useState([
 
     return (
       <div className="container">
-        {items.map(item => (
-          <Card></Card>
+        {items.map((item, index)=> (
+          <Card key = {index} item = {item}
+          ></Card>
 
 
         ))}
