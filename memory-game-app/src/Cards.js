@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from './Card'
 
 function Cards() {
 const [items, setItems] = useState([
@@ -17,10 +18,13 @@ const [items, setItems] = useState([
 ])
 
     return (
-      <div className="Cards">
-        {}
-        
-       <p>Cardss</p>
+      <div className="container">
+        {items.map(item => (
+          <Card></Card>
+
+
+        ))}
+    
       </div>
     );
   }
