@@ -17,6 +17,11 @@ const [items, setItems] = useState([
     {id: 6, img:'/img/terrier.jpg', stat: ""}
 ].sort(() => Math.random() - 0.5))
 
+//
+const[prev, setPrev] =useState(-1)
+
+
+//handleclick returns the id of the card
 function handleClick(id){
   alert(id)
 }
