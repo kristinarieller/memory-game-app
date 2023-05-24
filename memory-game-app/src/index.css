@@ -24,6 +24,7 @@ code {
   border-radius: 10px;
   transform: rotateY(180deg);
   animation: 2s hideCard linear;
+  transition: transform 0.5s;
 }
 
 @keyframes hideCard{
@@ -50,6 +51,7 @@ code {
   max-height: 80%;
   transform: scale(0);
   animation: 2s hideImage linear;
+  transition: transform 0.5s;
 }
 @keyframes hideImage{
 0%,70%{
