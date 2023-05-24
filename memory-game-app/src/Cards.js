@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Card() {
+function Cards() {
 const [items, setItems] = useState([
     {id: 1, img:'/img/borzoi.jpg', stat: ""},
     {id: 1, img:'/img/borzoi.jpg', stat: ""},
@@ -17,11 +17,12 @@ const [items, setItems] = useState([
 ])
 
     return (
-      <div className="Card">
+      <div className="Cards">
+        {}
         
-       <p>cards</p>
+       <p>Cardss</p>
       </div>
     );
   }
   
-  export default Card;
+  export default Cards;
