@@ -19,12 +19,29 @@ function Cards() {
     ].sort(() => Math.random() - 0.5)
   );
 
+//the first card of the pair has been clicked
 const [prev, setPrev] = useState(-1)
 
+//checking for a match
+function check(current){
+  if(items[current].id == items[prev].id){
+    items[current].stat = "correct" 
+    items[prev].stat = "correct" //both ids match
+    setPrev(-1) //the index is reset 
+  }
+}
 
+
+//cards are active upon click, either it is the first card in the pair or the second card. Upon clicking the second card, it is checked for a match.
   function handleClick(id) {
-    items[id].stat = "active"
-    setItems([...items])
+    if(prev === -1){
+      items[id].stat = "active"
+      setItems([...items])
+      setPrev(id)
+    }
+    else{
+      check(id)
+    }
   }
 
   return (
