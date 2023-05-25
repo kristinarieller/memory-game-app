@@ -23,7 +23,8 @@ const [prev, setPrev] = useState(-1)
 
 
   function handleClick(id) {
-    alert(id)
+    items[id].stat = "active"
+    setItems([...items])
   }
 
   return (
