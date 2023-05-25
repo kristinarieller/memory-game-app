@@ -4,18 +4,18 @@ import Card from "./Card";
 function Cards() {
   const [items, setItems] = useState(
     [
-      { id: 1, img: "/img/borzoi.jpg", stat: "" },
-      { id: 1, img: "/img/borzoi.jpg", stat: "" },
-      { id: 2, img: "/img/cavalier.jpeg", stat: "" },
-      { id: 2, img: "/img/cavalier.jpeg", stat: "" },
-      { id: 3, img: "/img/dachshund.jpg", stat: "" },
-      { id: 3, img: "/img/dachshund.jpg", stat: "" },
-      { id: 4, img: "/img/round.jpg", stat: "" },
-      { id: 4, img: "/img/round.jpg", stat: "" },
-      { id: 5, img: "/img/shiba.jpg", stat: "" },
-      { id: 5, img: "/img/shiba.jpg", stat: "" },
-      { id: 6, img: "/img/terrier.jpg", stat: "" },
-      { id: 6, img: "/img/terrier.jpg", stat: "" }
+      { id: 1, img: "/media/borzoi.jpg", stat: "" },
+      { id: 1, img: "/media/borzoi.jpg", stat: "" },
+      { id: 2, img: "/media/cavalier.jpeg", stat: "" },
+      { id: 2, img: "/media/cavalier.jpeg", stat: "" },
+      { id: 3, img: "/media/dachshund.jpg", stat: "" },
+      { id: 3, img: "/media/dachshund.jpg", stat: "" },
+      { id: 4, img: "/media/round.jpg", stat: "" },
+      { id: 4, img: "/media/round.jpg", stat: "" },
+      { id: 5, img: "/media/shiba.jpg", stat: "" },
+      { id: 5, img: "/media/shiba.jpg", stat: "" },
+      { id: 6, img: "/media/terrier.jpg", stat: "" },
+      { id: 6, img: "/media/terrier.jpg", stat: "" }
     ].sort(() => Math.random() - 0.5)
   );
 
