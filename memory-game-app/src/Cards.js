@@ -27,7 +27,19 @@ function check(current){
   if(items[current].id == items[prev].id){
     items[current].stat = "correct" 
     items[prev].stat = "correct" //both ids match
+    setItems([...items])
     setPrev(-1) //the index is reset 
+  }
+  else{
+    items[current].stat = "wrong" 
+    items[prev].stat = "wrong" // no match
+    setItems([...items])
+    setTimeout(() => {
+      items[current].stat = ""
+      items[prev].stat = "" //both states are reset from active and wrong
+      setItems([...items])
+      setPrev(-1) //the index is reset
+    },1000) //both cards are flipped back after some time
   }
 }
 
