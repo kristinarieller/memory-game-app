@@ -12,6 +12,11 @@
   height: 100%
 }
 
+h1{
+  font-size: 30px;
+  color: rgb(149, 166, 168);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -38,8 +43,8 @@ code {
 }
 
 .container{
-  height: 700px;
-  width: 700px;
+  height: 600px;
+  width: 600px;
   background-color: powderblue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -76,4 +81,10 @@ code {
 
 .card.active img{
   transform: scale(1);
+}
+
+button{
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 20px;
 }
