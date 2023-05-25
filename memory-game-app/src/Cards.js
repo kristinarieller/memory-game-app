@@ -1,42 +1,43 @@
 import { useState } from "react";
-import Card from './Card'
+import Card from "./Card";
 
 function Cards() {
-const [items, setItems] = useState([
-    {id: 1, img:'/img/borzoi.jpg', stat: ""},
-    {id: 1, img:'/img/borzoi.jpg', stat: ""},
-    {id: 2, img:'/img/cavalier.jpeg', stat: ""},
-    {id: 2, img:'/img/cavalier.jpeg', stat: ""},
-    {id: 3, img:'/img/dachshund.jpg', stat: ""},
-    {id: 3, img:'/img/dachshund.jpg', stat: ""},
-    {id: 4, img:'/img/round.jpg', stat: ""},
-    {id: 4, img:'/img/round.jpg', stat: ""},
-    {id: 5, img:'/img/shiba.jpg', stat: ""},
-    {id: 5, img:'/img/shiba.jpg', stat: ""},
-    {id: 6, img:'/img/terrier.jpg', stat: ""},
-    {id: 6, img:'/img/terrier.jpg', stat: ""}
-].sort(() => Math.random() - 0.5))
+  const [items, setItems] = useState(
+    [
+      { id: 1, img: "/img/borzoi.jpg", stat: "" },
+      { id: 1, img: "/img/borzoi.jpg", stat: "" },
+      { id: 2, img: "/img/cavalier.jpeg", stat: "" },
+      { id: 2, img: "/img/cavalier.jpeg", stat: "" },
+      { id: 3, img: "/img/dachshund.jpg", stat: "" },
+      { id: 3, img: "/img/dachshund.jpg", stat: "" },
+      { id: 4, img: "/img/round.jpg", stat: "" },
+      { id: 4, img: "/img/round.jpg", stat: "" },
+      { id: 5, img: "/img/shiba.jpg", stat: "" },
+      { id: 5, img: "/img/shiba.jpg", stat: "" },
+      { id: 6, img: "/img/terrier.jpg", stat: "" },
+      { id: 6, img: "/img/terrier.jpg", stat: "" }
+    ].sort(() => Math.random() - 0.5)
+  );
 
-//
-const[prev, setPrev] =useState(-1)
+const [prev, setPrev] = useState(-1)
 
 
-//handleclick returns the id of the card
-function handleClick(id){
-  alert(id)
+  function handleClick(id) {
+    alert(id)
+  }
+
+  return (
+    <div className="container">
+      {items.map((item, index) => (
+        <Card
+          key={index}
+          item={item}
+          id={index}
+          handleClick={handleClick}
+        ></Card>
+      ))}
+    </div>
+  )
 }
 
-    return (
-      <div className="container">
-        {items.map((item, index)=> (
-          <Card key = {index} item = {item} id = {index} handleClick = {handleClick}
-          ></Card>
-
-
-        ))}
-    
-      </div>
-    );
-  }
-  
-  export default Cards;
+export default Cards;
